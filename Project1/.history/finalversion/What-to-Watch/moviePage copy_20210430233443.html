@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/reset.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+</head>
+<header>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://bulma.io">
+            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+          </a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" onclick="window.location.href='index.html'">
+              Home
+            </a>
+        </div>
+</header>
+<body>
+<!--without div container-->
+        <div class="tile is-ancestor">
+            <div class="tile is-vertical is-12">
+                <div class="tile" id = "bg">
+                    <div class="tile is-parent">
+                        <article class="tile is-child  ">
+                            <div class="content">
+                                <div>
+                                    <figure class="image" style="padding-top:15px;" id="show_poster"></figure> 
+                                    <button class="button" style="margin-left:175px;"  id="videobtn">Play Trailer</button>
+                                    <div class="modal" id="myModal"><!--modal for trailer button. this is what pops up when modal is activated-->
+                                        <div class="modal-background">
+                                            <div class="modal-content" style="position:relative; margin:100px auto;" id="show_preview">
+                                            </div>
+                                            <button class="modal-close is-large" aria-label="close"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </article>
+                    </div>
+                    <div class="tile is-8 is-vertical white-text">
+                        <div class="tile is-parent" style="margin-left:-90px;">
+                            <article class="tile is-child  ">
+                                <p class="title" style="padding-top:15px;" id="show_title"></p>
+                                <h1 class = "is-size-4">Genre:</h1>
+                                <div class="is-size-5"  id="show_genre"></div>
+                                <br>
+                                <h1 class = "is-size-4">Release Date:</h1>
+                                <div class="is-size-5"  id="show_release"></div>
+                                <br>
+                                <h1 class = "is-size-4">User Score:</h1>
+                                <div class="is-size-5"  id="user_Rating"></div>
+                                <br>
+                                <h1 class = "is-size-4">Runtime:</h1>
+                                <div class="is-size-5"  id="runTime"></div>
+                                <br>
+                                <h1 class = "is-size-4">Where to Watch:</h1>
+                                <div class="is-size-5"  id="platform"></div>
+                            </article>
+                        </div>
+                        <div class="tile is-parent" style="margin-left:-90px; padding-right:20px; min-height:350px;"><!--added min height here to keep tiles from collapsing when show description or movie quotes/reviews are minimal-->
+                            <article class="tile is-child  ">
+                                <p class="is-size-3 has-text-weight-semibold" >Overview</p>
+                                <p class = "is-size-5"id="show_desc"></p>
+                                <br>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile is-parent has-text-centered" style="margin-left:500px;  " id = "card">
+                    <article class="tile is-child "><!--remove box to blend cards in-->
+                        <div class="card-container" ><!--container for the cards-->
+                            <div class="columns is-4"  ><!--changing is-12 adds spacing between cards-->
+                                <div class="column is-narrow"><!--gives columns width-->
+                                    <div class="card width">
+                                        <div class="card-image has-text-centered "><!--card padding-->
+                                            <figure class="image" id="img_actor1"></figure>
+                                        </div>
+                                        <div class="card-content" >
+                                            <p id="actor1"></p>
+                                            <p id="character1"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-narrow"><!--gives columns width-->
+                                    <div class="card width">
+                                        <div class="card-image has-text-centered px-0 py-0"><!--card padding-->
+                                            <figure class="image " id="img_actor2"></figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <p id="actor2"></p>
+                                            <p id="character2"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-narrow"><!--gives columns width-->
+                                    <div class="card width">
+                                        <div class="card-image has-text-centered px-0 py-0"><!--card padding-->
+                                            <figure class="image" id="img_actor3"></figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <p id="actor3"></p>
+                                            <p id="character3"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-narrow"><!--gives columns width-->
+                                    <div class="card width">
+                                        <div class="card-image has-text-centered px-0 py-0"><!--card padding-->
+                                            <figure class="image" id="img_actor4"></figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <p id="actor4"></p>
+                                            <p id="character4"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-narrow"><!--gives columns width-->
+                                    <div class="card width">
+                                        <div class="card-image has-text-centered px-0 py-0"><!--card padding-->
+                                            <figure class="image" id="img_actor5"></figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <p id="actor5"></p>
+                                            <p id="character5"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-narrow"><!--gives columns width-->
+                                    <div class="card width">
+                                        <div class="card-image has-text-centered px-0 py-0"><!--card padding-->
+                                            <figure class="image" id="img_actor6"></figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <p id="actor6"></p>
+                                            <p id="character6"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </article>
+                </div>
+            </div>       
+        </div>
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <img src="./assets/images/TMDB_Logo.png" alt = "TMDB Logo" style = "width: 5%;" class = "my-2">
+              <p class = 'is-size-7' style = "color: black;">
+                This product uses the TMDb API but is not endorsed or certified by TMDb. 
+              </p>
+            </div>
+          </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./assets/script/movie.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+/* .container{
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+	grid-gap: 0.5em;
+	
+} */
+	/* grid-template-columns: repeat(auto-fill, minmax(250px,1fr)); */
+	/* ^^can be used instead of a media query, need to look more into it*/
+	/*give specific height px or %*/
+/* .card .card-image{
+	height: 20px; 
+
+}*/
+
+/*styling below doesn't work if styling for tile is-parent set to box*/
+/* #tile_container {
+	background-image: url(./images/glKDfE6btIRcVB5zrjspRIs4r52.jpg);
+
+
+
+} */
+
+
+/*
+$spacing-shortcuts: ("margin": "mg");
+$spacing-horizontal: "h";
+$spacing-vertical: null;
+$spacing-values: ("small": 10px, "medium": 30px, "large": 60px); */
+
+/* #background-img {
+	background-image: url("https://www.themoviedb.org/t/p/w300_and_h450_bestv2/4VlXER3FImHeFuUjBShFamhIp9M.jpg");
+	background-repeat: no-repeat;
+	background-position:center;
+
+} */
+
+/*must have min-width and width at 140px.  if removed the cards spread out when the actor names are long*/
+div.card {
+	min-width:140px;
+	width:140px;
+	/* max-height:0px; */
+
+}

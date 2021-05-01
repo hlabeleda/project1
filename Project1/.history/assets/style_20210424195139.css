@@ -1,0 +1,21 @@
+/* .container{
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+	grid-gap: 0.5em;
+	
+} */
+	/* grid-template-columns: repeat(auto-fill, minmax(250px,1fr)); */
+	/* ^^can be used instead of a media query, need to look more into it*/
+.card .card-image{
+	height: 200px; /*give specific height px or %*/
+
+}
+
+/*styling below doesn't work if styling for tile is-parent set to box*/
+/* #tile_container {
+	background-image: url(./images/glKDfE6btIRcVB5zrjspRIs4r52.jpg);
+
+
+
+} */
